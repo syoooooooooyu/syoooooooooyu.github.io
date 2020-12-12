@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="app_icon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');</style>
+    <style>
+    	body{
+    		background-color: #f5f5f5;
+    	}
+    	.text{
+    		font-family: 'M PLUS Rounded 1c', sans-serif;
+    	}
+    	.cardp{
+    		font-size: 23px;
+    	}
+    	.midasijs {
+		    padding: 0.25em 0.5em;
+		    color: #494949;
+		    background: transparent;
+		    border-left: solid 5px #7db4e6;
+		    font-family: 'M PLUS Rounded 1c', sans-serif;
+		    font-size: 47px;
+		}
+		.midasiphp{
+			padding: 0.25em 0.5em;
+		    color: #494949;
+		    background: transparent;
+		    border-left: solid 5px #fff0f5;
+		    font-family: 'M PLUS Rounded 1c', sans-serif;
+		    font-size: 47px;
+		}
+		.midasihtml{
+			padding: 0.25em 0.5em;
+		    color: #494949;
+		    background: transparent;
+		    border-left: solid 5px #40e0d0;
+		    font-family: 'M PLUS Rounded 1c', sans-serif;
+		    font-size: 47px;
+		}
+		.midasijava{
+			padding: 0.25em 0.5em;
+		    color: #494949;
+		    background: transparent;
+		    border-left: solid 5px #66cdaa;
+		    font-family: 'M PLUS Rounded 1c', sans-serif;
+		    font-size: 47px;
+		}
+    </style>
+	<title>nyouynu</title>
+</head>
+<body>
+	<nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo">nyounyu</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="https://forum.mcbe.jp/threads/1131/">開発したものの例</a></li>
+      </ul>
+    </div>
+  	</nav>
+  	<div class="container">
+  		<div class="row">
+		    <div class="col s12 m12 l12 xl12">
+		      	<div class="card z-depth-5">
+			    	<div class="card-image">
+			    		<img src="icon.png">
+			    		<span class="card-title text black-text">自己紹介</span>
+			    	</div>
+			    	<div class="card-content black-text">
+			    		<p class="text cardp">進捗のために生まれた現役中学生。</p>
+				        <p class="text cardp">htmlやphp, javascriptの言語は自力で覚えた。褒めて。</p>
+			            <p class="text cardp">電車の中で携帯電話眺めながらにやけて周りから変な目で見られる。</p>
+			    	</div>
+		        	<div class="card-action">
+		          		<a class="btn waves-effect waves-light" href="https://twitter.com/Spjz9n">Twitter</a>
+		          		<a class="btn waves-effect waves-light" href="https://github.com/syoooooooooyu">Github</a>
+		          		<a id="info" class="btn waves-effect waves-light">詳細</a>
+		        	</div>
+		    	</div>
+			</div>
+		</div>
+		<div id="load" class="progress">
+      		<div class="indeterminate"></div>
+  		</div>
+  		<div id="myinfo">
+  		    <div class="row">
+			    <div class="col s5 m5 l5 xl5">
+			      	<div class="card white z-depth-5">
+				    	<div class="card-content white-text">
+				        	<span class="card-title text black-text">歴史</span>
+				        	<p class="text cardp black-text">2020/3</p>
+				        	<p class="text cardp black-text">開発の道を歩みだす</p>
+				        	<p class="text cardp black-text">PMMPの言語.PHPを学習</p>
+				        	<p class="text cardp black-text">2020/5</p>
+				        	<p class="text cardp black-text">開発をしっかりとやり始める</p>
+				        	<p class="text cardp black-text">PMMPのplugin初作成</p>
+			          		<p class="text cardp black-text">2020/8</p>
+			          		<p class="text cardp black-text">githubの存在を知る</p>
+			                <p class="text cardp black-text">2020/10</p>
+			                <p class="text cardp black-text">javascript, htmlを学ぶ</p>
+			                <p class="text cardp black-text">PMMPの大型plugin作成開始</p>
+			        	</div>
+			    	</div>
+				</div>
+				<div class="col s7 m7 l7 xl7">
+			      	<div class="card white z-depth-5">
+				    	<div class="card-content white-text">
+				        	<span class="card-title text black-text">出来ること</span>
+				        	<p class="midasijs">JavaScript</p>
+				        	<p class="midasiphp">PHP</p>
+				        	<p class="midasihtml">HTML</p>
+				        	<p class="midasijava">Java</p>
+			        	</div>
+			    	</div>
+				</div>
+			</div>
+  		</div>
+	</div>
+</body>
+<script>
+	$("#load").hide();
+	$("#myinfo").hide();
+	$("#info").click(function(){
+		$("#load").show();
+		scrollBy(0, 10);
+		setTimeout(function(){
+			$("#load").hide();
+			$("#myinfo").show();
+			scrollBy(0, 500);
+		}, 2000);
+	});
+</script>
+</html>
