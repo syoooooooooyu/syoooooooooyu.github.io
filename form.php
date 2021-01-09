@@ -3,7 +3,7 @@
 <html lang="ja">
 <body>
 <div class="form" id="form">
-  <form action="form.php" method="">
+  <form action="form.php" method="Post">
     <input type="email" name="email">
     <input type="submit" name="submit" value="送信">
   </form>
