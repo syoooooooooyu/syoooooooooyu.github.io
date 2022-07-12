@@ -12,11 +12,11 @@
     recognition.onresult = (event) => {
         const input = event.results[0][0].transcript;
         let t;
-        if(input === "雑魚"){
+        if(input.prototype.includes("雑魚")){
             t = "ざぁーこ";
-        }else if(input === "キモい"){
+        }else if(input.prototype.includes("キモ") || input.prototype.includes("きも")){
             t = "お兄ちゃんキモイよ";
-        }else if(input === "死ね"){
+        }else if(input.prototype.includes("死ね")) {
             t = "早く死ねばいいのに";
         }else{
             t = input;
