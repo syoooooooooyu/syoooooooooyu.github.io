@@ -9,20 +9,25 @@
     const recognition = new webkitSpeechRecognition();
     recognition.lang = "ja-JP";
     recognition.continuous = true;
+    let input;
+    let t;
+    let audio;
+    let now = 0;
     recognition.onresult = (event) => {
-        const input = event.results[0][0].transcript;
-        var t;
-        if(input.prototype.includes("雑魚")){
+        input = event.results[now][0].transcript;
+        console.log(input);
+        now = now + 1;
+        if(input.indexOf("雑魚") !== -1){
             t = "ざぁーこ";
-            let audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
+            audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
             audio.play();
-        }else if(input.prototype.includes("キモ") || input.prototype.includes("きも")){
+        }else if(input.indexOf("キモ") !== -1 || input.indexOf("きも") !== -1){
             t = "お兄ちゃんキモイよ";
-            let audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
+            audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
             audio.play();
-        }else if(input.prototype.includes("死ね")) {
+        }else if(input.indexOf("死ね") !== -1) {
             t = "早く死ねばいいのに";
-            let audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
+            audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
             audio.play();
         }
     }
