@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>あれれ～～おにいちゃんじゃ～ん♡</title>
+</head>
+<body>
+<script type="text/javascript">
+    const recognition = new webkitSpeechRecognition();
+    recognition.lang = "ja-JP";
+    recognition.continuous = true;
+    recognition.onresult = (event) => {
+        const input = event.results[0][0].transcript;
+        let t;
+        if(input === "雑魚"){
+            t = "ざぁーこ";
+        }else if(input === "キモい"){
+            t = "お兄ちゃんキモイよ";
+        }else if(input === "死ね"){
+            t = "早く死ねばいいのに";
+        }else{
+            t = input;
+        }
+        let audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
+        audio.play();
+    }
+</script>
+<p></p>
+<button onclick="recognition.start()">recording(話した内容はどこにも記録されません)</button>
+<p>https://arutora.com/15923 を参考にして 「VB-CABLE」 をインストールしてください。</p>
+<p>chromeの右上にある3点のアイコンから設定を開き、</p>
+<p>[プライバシーとセキュリティ] -> [サイトの設定] -> [マイク] をクリックします。</p>
+<p>[マイク] から既定のマイク入力を [CABLE Output (VB-AUDIO ~)] に変更します。</p>
+<p>Windows [設定] -> [サウンドの設定] -> [サウンドの詳細設定] -> [録音] の [CABLE Output (VB-AUDIO ~)] を右クリックします。</p>
+<p>[プロパティ] -> [聴く] -> [このデバイスを聞く] にチェックを付けます。</p>
+<img src="sample.png" alt="">
+<p>VC等できるアプリの出力を [VB-CABLE] に変更します。</p>
+<p>このサイトのボタン [recording] をクリックします。</p>
+<p></p>
+</body>
+</html>
