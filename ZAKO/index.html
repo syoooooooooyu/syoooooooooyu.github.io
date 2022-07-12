@@ -14,15 +14,17 @@
         var t;
         if(input.prototype.includes("雑魚")){
             t = "ざぁーこ";
+            let audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
+            audio.play();
         }else if(input.prototype.includes("キモ") || input.prototype.includes("きも")){
             t = "お兄ちゃんキモイよ";
+            let audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
+            audio.play();
         }else if(input.prototype.includes("死ね")) {
             t = "早く死ねばいいのに";
-        }else{
-            t = input;
+            let audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
+            audio.play();
         }
-        let audio = new Audio("https://api.su-shiki.com/v2/voicevox/audio/?key=A731d73601z7e-3&speaker=6&pitch=0&intonationScale=1&speed=1&text=" + t);
-        audio.play();
     }
 </script>
 <p></p>
