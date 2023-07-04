@@ -5,6 +5,19 @@
     <title>あれれ～～おにいちゃんじゃ～ん♡</title>
 </head>
 <body>
+<p></p>
+<button onclick="recognition.start()">recording(話した内容はどこにも記録されません)</button>
+<p>https://arutora.com/15923 を参考にして 「VB-CABLE」 をインストールしてください。</p>
+<p>chromeの右上にある3点のアイコンから設定を開き、</p>
+<p>[プライバシーとセキュリティ] -> [サイトの設定] -> [マイク] をクリックします。</p>
+<p>[マイク] から既定のマイク入力を [CABLE Output (VB-AUDIO ~)] に変更します。</p>
+<p>Windows [設定] -> [サウンドの設定] -> [サウンドの詳細設定] -> [録音] の [CABLE Output (VB-AUDIO ~)] を右クリックします。</p>
+<p>[プロパティ] -> [聴く] -> [このデバイスを聞く] にチェックを付けます。</p>
+<img src="sample.png" alt="">
+<p>VC等できるアプリの出力を [VB-CABLE] に変更します。</p>
+<p>このサイトのボタン [recording] をクリックします。</p>
+<p></p>
+</body>
 <script type="text/javascript">
     const recognition = new webkitSpeechRecognition();
     recognition.lang = "ja-JP";
@@ -32,17 +45,4 @@
         }
     }
 </script>
-<p></p>
-<button onclick="recognition.start()">recording(話した内容はどこにも記録されません)</button>
-<p>https://arutora.com/15923 を参考にして 「VB-CABLE」 をインストールしてください。</p>
-<p>chromeの右上にある3点のアイコンから設定を開き、</p>
-<p>[プライバシーとセキュリティ] -> [サイトの設定] -> [マイク] をクリックします。</p>
-<p>[マイク] から既定のマイク入力を [CABLE Output (VB-AUDIO ~)] に変更します。</p>
-<p>Windows [設定] -> [サウンドの設定] -> [サウンドの詳細設定] -> [録音] の [CABLE Output (VB-AUDIO ~)] を右クリックします。</p>
-<p>[プロパティ] -> [聴く] -> [このデバイスを聞く] にチェックを付けます。</p>
-<img src="sample.png" alt="">
-<p>VC等できるアプリの出力を [VB-CABLE] に変更します。</p>
-<p>このサイトのボタン [recording] をクリックします。</p>
-<p></p>
-</body>
 </html>
