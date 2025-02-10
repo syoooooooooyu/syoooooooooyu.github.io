@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<span>ルーレット上限</span><br>
+<input id="max" type="number"><br>
+<span>オフセット(出たルーレットの値にこの値をプラスします)</span><br>
+<input id="offset" type="number"><br><br>
+
 <button onclick="saikoro()">ここを押して抽選</button>
 <br>
 <span id="saikoro1"></span><span>,</span>
 <span id="saikoro2"></span><span>,</span>
 <span id="saikoro3"></span><br>
-<h1>あなたは<span id="res"></span>回のスクワットをしてください</h1>
+<h1>あなたは<span id="res"></span>回分の筋トレを行ってください。</h1>
 </body>
 <script>
     function saikoro(){
-        let d1 = Math.floor( Math.random() * 11 ) + 15;
-        let d2 = Math.floor( Math.random() * 11 ) + 15;
-        let d3 = Math.floor( Math.random() * 11 ) + 15;
+        let max = parseInt(document.getElementById("max").value);
+        let offset = parseInt(document.getElementById("offset").value);
+        let d1 = Math.floor( Math.random() * max ) + offset;
+        let d2 = Math.floor( Math.random() * max ) + offset;
+        let d3 = Math.floor( Math.random() * max ) + offset;
         document.getElementById("saikoro1").innerText = d1;
         document.getElementById("saikoro2").innerText = d2;
         document.getElementById("saikoro3").innerText = d3;
