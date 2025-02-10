@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<button onclick="saikoro()">ここを押して抽選</button>
+<br>
+<span id="saikoro1"></span><span>,</span>
+<span id="saikoro2"></span><span>,</span>
+<span id="saikoro3"></span><br>
+<h1>あなたは<span id="res"></span>回のスクワットをしてください</h1>
+</body>
+<script>
+    function saikoro(){
+        let d1 = Math.floor( Math.random() * 11 ) + 15;
+        let d2 = Math.floor( Math.random() * 11 ) + 15;
+        let d3 = Math.floor( Math.random() * 11 ) + 15;
+        document.getElementById("saikoro1").innerText = d1;
+        document.getElementById("saikoro2").innerText = d2;
+        document.getElementById("saikoro3").innerText = d3;
+        document.getElementById("res").innerText = d1+d2+d3;
+    }
+</script>
+</html>
